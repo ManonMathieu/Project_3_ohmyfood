@@ -5,76 +5,76 @@
     <script src="https://kit.fontawesome.com/3b54ec339f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_menu.css"
-    <title>Menu À la française</title>
+    <title>Menu Le délice des sens</title>
 </head>
 <body>
     <header>
         <div id="logo">
             <a href="index.html"><img src="Images/logo.png" alt="logo"></a>
         </div>
-        <img src="images/a_la_francaise.jpg" alt="À la française">
+        <img src="images/le_delice_des_sens.jpg" alt="Le délice des sens">
     </header>
 
     <main>
         <div>
-            <h3>À la française</h3>
+            <h3>Le délice des sens</h3>
             <i class="fa-thin fa-heart"></i>
         </div>
         <section class="menu">
             <h4>ENTRÉES</h4>
             <div class="menu_line">
-                <p><strong>Tartare de poulpe acidulé</strong></p><br>
-                <p>Aux zestes d'orange</p>
+                <p><strong>Tartare de thon</strong></p><br>
+                <p>Assaisonné au yuzu</p>
                 <p><strong>25€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Velouté de légumes d'antan</strong></p><br>
-                <p>Carotte, panais, topinambour</p>
+                <p><strong>Bouchée de homard croustillant</strong></p><br>
+                <p>Et sa farandole de petits légumes</p>
                 <p><strong>35€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Soupe à l'oignon</strong></p><br>
-                <p>Revisitée</p>
+                <p><strong>Velouté de cèpes</strong></p><br>
+                <p>Aux truffes</p>
                 <p><strong>20€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <h4>PLATS</h4>
             <div class="menu_line">
-                <p><strong>Coquilles Saint-Jacques</strong></p><br>
-                <p>Accompagnées d'une purée de panais</p>
+                <p><strong>Poulet rôti aux herbes de Provence</strong></p><br>
+                <p>Et sa crème de truffe</p>
                 <p><strong>40€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Magret de canard</strong></p><br>
-                <p>Et parmentier de pommes de terre</p>
+                <p><strong>Langouste rôtie</strong></p><br>
+                <p>Et ses légumes de saison</p>
                 <p><strong>35€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Pigeonneau d'Ille-et-Vilaine</strong></p><br>
-                <p>Sur son lit de gnocchis aux légumes</p>
+                <p><strong>Côte de boeuf Angus</strong></p><br>
+                <p>Et sa purée de panais</p>
                 <p><strong>44€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <h4>DESSERTS</h4>
             <div class="menu_line">
-                <p><strong>Pétales de violettes glacés</strong></p><br>
-                <p>Et purée de noisettes</p>
+                <p><strong>Farandole de desserts</strong></p><br>
+                <p>Du chef</p>
                 <p><strong>18€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Fondant au chocolat</strong></p><br>
-                <p>Revisité</p>
+                <p><strong>Crème brûlée</strong></p><br>
+                <p>Revisitée</p>
                 <p><strong>22€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <div class="menu_line">
-                <p><strong>Millefeuille croustillant</strong></p><br>
-                <p>Myrtilles et pâte d'amande</p>
+                <p><strong>Tiramisu</strong></p><br>
+                <p>À la noisette</p>
                 <p><strong>23€</strong></p>
                 <i class="fa-solid fa-circle-check"></i>
         </section>
