@@ -19,9 +19,6 @@ header {
         .return-button {
             display: none;
 
-            @media all and (min-width: $tablet-width) {
-                display: initial;
-            }
         }
     }
 }

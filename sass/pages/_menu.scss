@@ -8,3 +8,162 @@ section {
     margin: 0 0 -5em 0;
 }
 
+.restaurant-menus {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 40px 30px 0px 0px;
+    background-color: #f7f7f7;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+}
+
+.menu-components {
+
+    &--appetizer {
+        >.button-menu {
+            &:nth-child(1) {
+                animation: menus 1600ms ease-out both;
+            }
+
+            &:nth-child(2) {
+                animation: menus 1600ms 300ms ease-out both;
+            }
+
+            &:nth-child(3) {
+                animation: menus 1600ms 400ms ease-out both;
+            }
+
+            &:nth-child(4) {
+                animation: menus 1600ms 500ms ease-out both;
+            }
+
+            &:nth-child(5) {
+                animation: menus 1600ms 500ms ease-out both;
+            }
+        }
+    }
+
+
+    &--dish {
+        >.button-menu {
+            &:nth-child(1) {
+                animation: menus 1600ms 600ms ease-out both;
+            }
+
+            &:nth-child(2) {
+                animation: menus 1600ms 700ms ease-out both;
+            }
+
+            &:nth-child(3) {
+                animation: menus 1600ms 800ms ease-out both;
+            }
+
+            &:nth-child(4) {
+                animation: menus 1600ms 900ms ease-out both;
+            }
+        }
+    }
+
+    &--desserts {
+        >.button-menu {
+            &:nth-child(1) {
+                animation: menus 1600ms 1000ms ease-out both;
+            }
+
+            &:nth-child(2) {
+                animation: menus 1600ms 1100ms ease-out both;
+            }
+
+            &:nth-child(3) {
+                animation: menus 1600ms 1200ms ease-out both;
+            }
+
+            &:nth-child(4) {
+                animation: menus 1600ms 1300ms ease-out both;
+            }
+        }
+    }
+}
+
+
+.menu-components__title::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 2px;
+}
+
+.button-menu {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 70px;
+    margin-bottom: 15px;
+    background-color: #ffff;
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px 0.5px rgb(221, 221, 221);
+    overflow: hidden;
+    cursor: pointer;
+
+
+    &__informations {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 15px 10px 10px;
+        overflow: hidden;
+
+        &__title {
+            overflow: hidden;
+
+            p {
+                margin-top: 5px;
+            }
+
+            p,
+            h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &:hover>.button-menu__check {
+        animation: check 600ms ease-in-out both;
+    }
+
+    &:hover>.button-menu__check i {
+        animation: rotation 600ms ease-in-out both;
+    }
+}
+
+.button-menu__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #99E2D0;
+    height: 100%;
+    width: 0%;
+}
+
+.content__nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
