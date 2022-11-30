@@ -1,0 +1,22 @@
+{
+  "name": "project_3",
+  "version": "1.0.0",
+  "description": "\"projet 3\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss sass/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManonMathieu/Project_3_ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManonMathieu/Project_3_ohmyfood/issues"
+  },
+  "homepage": "https://github.com/ManonMathieu/Project_3_ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

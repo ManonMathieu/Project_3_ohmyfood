@@ -1,0 +1,71 @@
+.explore-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50px;
+    color: white;
+    background: $button-color;
+    border-radius: 25px;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+    }
+
+
+    @media all and (min-width: $tablet-width){
+        width: 50%;
+    }
+
+    @media all and (min-width: $desktop-width){
+        width: 40%;
+    }
+}
+
+.new-button {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 75px;
+height: 28px;
+font-size: 14px;
+font-weight: 500;
+color: #008766;
+background-color: $color-tertiary;
+border-radius: 2px;
+}
+
+.heart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    & i {
+        font-size: 22px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+            &::after{
+                transform: scale(1);
+            }
+        }
+
+        &::after{
+            content: '\f004';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: scale(0);
+            font-weight: 900;
+            background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+            background-clip: text;
+            color: transparent;
+            transform-origin: bottom;
+            transition: transform 400ms;
+        }
+    }
+}
