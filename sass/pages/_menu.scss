@@ -22,11 +22,17 @@ section {
         justify-content: space-between;
         align-items: center;
         padding-right: 20px;
+        @extend %restaurants-title;
         font-size: 14px;
     }
 }
 
 .menu-components {
+    @media all and (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
     &--appetizer {
         >.button-menu {
@@ -95,11 +101,20 @@ section {
 }
 
 
+.menu-components__title {
+    @extend %menu-components;
+
+    @media all and (min-width: $desktop-width) {
+        width: 70px;
+    }
+}
+
 .menu-components__title::after {
     content: "";
     display: block;
     width: 38px;
     height: 2px;
+    background-color: $color-tertiary;
 }
 
 .button-menu {
@@ -115,6 +130,9 @@ section {
     overflow: hidden;
     cursor: pointer;
 
+    @media all and (min-width: $desktop-width) {
+        width: 30%;
+    }
 
     &__informations {
         display: flex;

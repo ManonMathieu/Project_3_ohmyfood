@@ -8,6 +8,9 @@
     background-color: #EAEAEA;
     box-shadow: 0px 6px 6px -9px black inset;
 
+    @media all and (min-width: $desktop-width) {
+        font-size: 20px;
+    }
 
     & i {
         font-size: 90%;
@@ -39,10 +42,32 @@
 .operation {
     padding: 20px;
 
+    @media all and (min-width: $desktop-width) {
+        padding: 0px 20px 5px 20px;
+    }
+
+    &__title {
+        @media all and (min-width: $desktop-width) {
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+
     &__steps {
         display: flex;
         flex-direction: column;
         padding-left: 15px;
+
+        @media all and (min-width: $tablet-width) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 0px;
+
+            a {
+                width: 32%;
+            }
+
+        }
     }
 }
 
@@ -66,6 +91,7 @@
         padding-left: 8px;
         padding-top: 4px;
         color: #ffff;
+        background-color: $color-primary;
         border-radius: 50%;
     }
 
@@ -75,14 +101,25 @@
         color: grey;
         font-size: 20px;
 
+        @media all and (min-width: $tablet-width) {
+            padding: 20px;
+        }
     }
 
     &:hover {
         background-color: #f5edff;
         box-shadow: 9px 9px 9px 4px rgb(221, 221, 221);
 
+        & i {
+            color: $color-primary;
+        }
     }
 
+    & h3 {
+        @media all and (min-width: $tablet-width) {
+            padding: 20px;
+        }
+    }
 }
 
 .restaurants {
@@ -91,9 +128,33 @@
     background-color: #F7F7F7;
     padding: 20px;
 
+    & h2 {
+        @media all and (min-width: $desktop-width) {
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 0px;
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
+
+        @media all and (min-width: $tablet-width) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        & a {
+            @media all and (min-width: $tablet-width) {
+                width: 45%;
+            }
+
+            @media all and (min-width: $desktop-width) {
+                width: 20%;
+            }
+        }
 
         &__card {
             display: flex;
@@ -118,6 +179,15 @@
                 justify-content: space-between;
                 padding: 15px 25px 10px 10px;
 
+                @media all and (min-width: $tablet-width) {
+                    align-items: center;
+                }
+
+                @media all and (min-width: $desktop-width) {
+                    flex-direction: column;
+                    padding: 10px 15px;
+                    align-items: baseline;
+
                     & span {
                         width: 100%;
                         justify-content: flex-end;
@@ -131,6 +201,7 @@
                 }
             }
         }
+    }
 }
 
 .new-button {

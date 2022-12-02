@@ -6,12 +6,21 @@
     height: 50px;
     color: white;
     border-radius: 25px;
+    background: $button-color;
+
    
     &:hover {
         opacity: 0.8;
-        box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 13px rgba(0, 0, 0, 0.5);
     }
 
+    @media all and (min-width: $tablet-width) {
+        width: 50%;
+    }
+
+    @media all and (min-width: $desktop-width) {
+        width: 40%;
+    }
 }
 
 .new-button {
@@ -24,6 +33,7 @@ font-size: 14px;
 font-weight: 500;
 color: #008766;
 border-radius: 2px;
+background: $color-tertiary;
 }
 
 .heart-button {

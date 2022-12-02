@@ -10,6 +10,7 @@
     animation: opacity 3s forwards;
     background-color: #ffff;
     object-fit: cover;
+    z-index: 10000;
 
     &__logo {
         display: flex;
@@ -21,7 +22,9 @@
         color: beige;
         padding: 30px;
         font-family: 'Shrikhand', cursive;
-        border-radius: 15px;
+        border-radius: 10px;
         animation: loader 3s ease-in-out both;
+        border: 5px solid $color-primary;
+        background: $button-color;
     }
 }

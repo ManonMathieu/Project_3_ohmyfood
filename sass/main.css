@@ -1,5 +1,81 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Shrikhand&display=swap";
+@keyframes opacity {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  99% {
+    opacity: 0.9;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+  }
+  30% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.1);
+    opacity: 0.7;
+  }
+}
+@keyframes menus {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    opacity: 1;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 20%;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu-components__title {
+  font-weight: 300;
+  font-size: medium;
+}
+
+.restaurant-menus__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+
 *,
 *::before,
 *::after {
@@ -30,6 +106,14 @@ i {
   padding: 10px;
 }
 
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: Shrikhand, "cursive";
+}
+
 h3 {
   margin: 0px;
 }
@@ -46,10 +130,21 @@ p {
   height: 50px;
   color: white;
   border-radius: 25px;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
 }
 .explore-button:hover {
   opacity: 0.8;
-  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.5);
+}
+@media all and (min-width: 768px) {
+  .explore-button {
+    width: 50%;
+  }
+}
+@media all and (min-width: 992px) {
+  .explore-button {
+    width: 40%;
+  }
 }
 
 .new-button {
@@ -62,6 +157,7 @@ p {
   font-weight: 500;
   color: #008766;
   border-radius: 2px;
+  background: #99E2D0;
 }
 
 .heart-button {
@@ -98,12 +194,55 @@ footer {
   color: white;
   background-color: #353535;
 }
+@media all and (min-width: 768px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 footer h3 {
   margin-bottom: 15px;
+}
+@media all and (min-width: 768px) {
+  footer h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media all and (min-width: 768px) {
+  footer .footer__links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+  }
+}
+@media all and (min-width: 992px) {
+  footer .footer__links {
+    height: auto;
+  }
 }
 footer .footer__links ul {
   padding: 0px;
   margin: 0px;
+}
+@media all and (min-width: 768px) {
+  footer .footer__links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 992px) {
+  footer .footer__links ul {
+    flex-direction: row;
+    padding: 10px;
+  }
 }
 footer .footer__links ul li {
   list-style-type: none;
@@ -114,6 +253,17 @@ footer .footer__links ul li i {
   font-size: 16px;
   margin-right: 10px;
 }
+@media all and (min-width: 768px) {
+  footer .footer__links ul li {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (min-width: 992px) {
+  footer .footer__links ul li {
+    padding: 0px;
+  }
+}
 footer .footer__links ul a {
   color: white;
 }
@@ -123,8 +273,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 65px;
+  height: 80px;
   padding-bottom: 5px;
+}
+header .nav__logo {
+  height: 50px;
 }
 header a {
   position: absolute;
@@ -137,6 +290,11 @@ header a i {
 }
 header a .return-button {
   display: none;
+}
+@media all and (min-width: 768px) {
+  header a .return-button {
+    display: initial;
+  }
 }
 
 .loader {
@@ -151,6 +309,7 @@ header a .return-button {
   animation: opacity 3s forwards;
   background-color: white;
   object-fit: cover;
+  z-index: 10000;
 }
 .loader__logo {
   display: flex;
@@ -162,8 +321,10 @@ header a .return-button {
   color: beige;
   padding: 30px;
   font-family: "Shrikhand", cursive;
-  border-radius: 15px;
+  border-radius: 10px;
   animation: loader 3s ease-in-out both;
+  border: 5px solid #9356DC;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
 }
 
 .location {
@@ -175,6 +336,11 @@ header a .return-button {
   margin: 0px;
   background-color: #EAEAEA;
   box-shadow: 0px 6px 6px -9px black inset;
+}
+@media all and (min-width: 992px) {
+  .location {
+    font-size: 20px;
+  }
 }
 .location i {
   font-size: 90%;
@@ -203,10 +369,31 @@ header a .return-button {
 .operation {
   padding: 20px;
 }
+@media all and (min-width: 992px) {
+  .operation {
+    padding: 0px 20px 5px 20px;
+  }
+}
+@media all and (min-width: 992px) {
+  .operation__title {
+    text-align: center;
+    text-decoration: underline;
+  }
+}
 .operation__steps {
   display: flex;
   flex-direction: column;
   padding-left: 15px;
+}
+@media all and (min-width: 768px) {
+  .operation__steps {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0px;
+  }
+  .operation__steps a {
+    width: 32%;
+  }
 }
 
 .steps-button {
@@ -229,6 +416,7 @@ header a .return-button {
   padding-left: 8px;
   padding-top: 4px;
   color: white;
+  background-color: #9356DC;
   border-radius: 50%;
 }
 .steps-button i {
@@ -237,9 +425,22 @@ header a .return-button {
   color: grey;
   font-size: 20px;
 }
+@media all and (min-width: 768px) {
+  .steps-button i {
+    padding: 20px;
+  }
+}
 .steps-button:hover {
   background-color: #f5edff;
   box-shadow: 9px 9px 9px 4px rgb(221, 221, 221);
+}
+.steps-button:hover i {
+  color: #9356DC;
+}
+@media all and (min-width: 768px) {
+  .steps-button h3 {
+    padding: 20px;
+  }
 }
 
 .restaurants {
@@ -248,9 +449,33 @@ header a .return-button {
   background-color: #F7F7F7;
   padding: 20px;
 }
+@media all and (min-width: 992px) {
+  .restaurants h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 0px;
+  }
+}
 .restaurants__list {
   display: flex;
   flex-direction: column;
+}
+@media all and (min-width: 768px) {
+  .restaurants__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 768px) {
+  .restaurants__list a {
+    width: 45%;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants__list a {
+    width: 20%;
+  }
 }
 .restaurants__list__card {
   display: flex;
@@ -273,12 +498,24 @@ header a .return-button {
   justify-content: space-between;
   padding: 15px 25px 10px 10px;
 }
-.restaurants__list__card__text span {
-  width: 100%;
-  justify-content: flex-end;
+@media all and (min-width: 768px) {
+  .restaurants__list__card__text {
+    align-items: center;
+  }
 }
-.restaurants__list__card h3,
-.restaurants__list__card p {
+@media all and (min-width: 992px) {
+  .restaurants__list__card__text {
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: baseline;
+  }
+  .restaurants__list__card__text span {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+.restaurants__list__card__text h3,
+.restaurants__list__card__text p {
   margin: 0px;
   padding-bottom: 10px;
 }
@@ -316,6 +553,13 @@ section {
   font-size: 14px;
 }
 
+@media all and (min-width: 992px) {
+  .menu-components {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .menu-components--appetizer > .button-menu:nth-child(1) {
   animation: menus 1600ms ease-out both;
 }
@@ -356,11 +600,18 @@ section {
   animation: menus 1600ms 1300ms ease-out both;
 }
 
+@media all and (min-width: 992px) {
+  .menu-components__title {
+    width: 70px;
+  }
+}
+
 .menu-components__title::after {
   content: "";
   display: block;
   width: 38px;
   height: 2px;
+  background-color: #99E2D0;
 }
 
 .button-menu {
@@ -375,6 +626,11 @@ section {
   box-shadow: 6px 6px 8px 0.5px rgb(221, 221, 221);
   overflow: hidden;
   cursor: pointer;
+}
+@media all and (min-width: 992px) {
+  .button-menu {
+    width: 30%;
+  }
 }
 .button-menu__informations {
   display: flex;
