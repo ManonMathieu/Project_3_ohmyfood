@@ -1,13 +1,14 @@
 header {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     height: 80px;
-    padding-bottom: 5px;
+    padding-bottom: 90px;
 
     & .nav__logo {
+        background-position:top left;
+        background-position:top center;
         height: 50px;
+        width: 100%;
     }
 
     & a {

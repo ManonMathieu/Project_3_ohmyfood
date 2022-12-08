@@ -72,8 +72,12 @@
 }
 
 .restaurant-menus__title {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: 400;
+}
+
+head title {
+  visibility: hidden;
 }
 
 *,
@@ -111,7 +115,8 @@ body, html {
 }
 
 h1 {
-  font-family: Shrikhand, "cursive";
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
 }
 
 h3 {
@@ -126,11 +131,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 50%;
   height: 50px;
   color: white;
   border-radius: 25px;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
+  border: none;
+  font-size: 16px;
 }
 .explore-button:hover {
   opacity: 0.8;
@@ -168,7 +175,7 @@ p {
   height: 40px;
 }
 .heart-button i {
-  font-size: 22px;
+  font-size: 25px;
   position: relative;
   cursor: pointer;
 }
@@ -269,15 +276,16 @@ footer .footer__links ul a {
 }
 
 header {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   height: 80px;
-  padding-bottom: 5px;
+  padding-bottom: 90px;
 }
 header .nav__logo {
+  background-position: top left;
+  background-position: top center;
   height: 50px;
+  width: 100%;
 }
 header a {
   position: absolute;
@@ -309,7 +317,6 @@ header a .return-button {
   animation: opacity 3s forwards;
   background-color: white;
   object-fit: cover;
-  z-index: 10000;
 }
 .loader__logo {
   display: flex;
@@ -322,7 +329,7 @@ header a .return-button {
   padding: 30px;
   font-family: "Shrikhand", cursive;
   border-radius: 10px;
-  animation: loader 3s ease-in-out both;
+  animation: loader 1, 5s ease-in-out both;
   border: 5px solid #9356DC;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
 }
@@ -356,14 +363,15 @@ header a .return-button {
   background-color: #F7F7F7;
 }
 .presentation__title {
-  width: 88%;
-  font-weight: 550;
+  width: 95%;
+  font-size: 30px;
+  font-weight: 900;
   margin-top: 0px;
 }
 .presentation__text {
-  font-size: 19px;
-  font-weight: 300;
+  font-size: 20px;
   margin-bottom: 20px;
+  color: grey;
 }
 
 .operation {

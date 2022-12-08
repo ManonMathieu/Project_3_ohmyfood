@@ -27,15 +27,16 @@
     background-color: #F7F7F7;
 
     &__title {
-        width: 88%;
-        font-weight: 550;
+        width: 95%;
+        font-size: 30px;
+        font-weight: 900;
         margin-top: 0px;
     }
 
     &__text {
-        font-size: 19px;
-        font-weight: 300;
+        font-size: 20px;
         margin-bottom: 20px;
+        color: grey;
     }
 }
 
