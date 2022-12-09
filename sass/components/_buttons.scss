@@ -25,8 +25,28 @@
     }
 }
 
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    color: white;
+    border-radius: 25px;
+    background: $button-color;
+    border: none;
+    font-size: 16px;
+
+   
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 6px 13px rgba(0, 0, 0, 0.5);
+    }
+
+}
+
 .new-button {
-display: flex;
+display: flex; 
 justify-content: center;
 align-items: center;
 width: 75px;

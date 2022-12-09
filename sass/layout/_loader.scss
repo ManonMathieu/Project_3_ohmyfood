@@ -1,30 +1,16 @@
 .loader {
-    position: fixed;
-    display: flex;
-    top: 0px;
-    left: 0px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    animation: opacity 3s forwards;
-    background-color: #ffff;
-    object-fit: cover;
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    display: block;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 30%;
+    border: 16px solid $color-tertiary;
+    border-radius: 50%;
+    border-top: 16px solid $color-primary;
+    border-bottom: 16px solid $color-secondary;
+    animation: spin hide-spinner 2s linear infinite;
+    z-index: 10000;
 
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: auto;
-        font-size: 270%;
-        color: beige;
-        padding: 30px;
-        font-family: 'Shrikhand', cursive;
-        border-radius: 10px;
-        animation: loader 1,5s ease-in-out both;
-        border: 5px solid $color-primary;
-        background: $button-color;
-    }
 }

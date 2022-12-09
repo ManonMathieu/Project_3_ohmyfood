@@ -14,22 +14,20 @@
     z-index: -1;
   }
 }
-@keyframes loader {
+@keyframes spin {
   0% {
-    transform: rotate(0deg) scale(0);
-    opacity: 1;
-  }
-  30% {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: rotate(360deg) scale(1);
-    opacity: 0.9;
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) scale(0.1);
-    opacity: 0.7;
+    transform: rotate(360deg);
+  }
+}
+@keyframes hide-spinner {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 @keyframes menus {
@@ -66,6 +64,23 @@
     transform: rotate(360deg);
   }
 }
+body, html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
 .menu-components__title {
   font-weight: 300;
   font-size: medium;
@@ -110,23 +125,6 @@ i {
   padding: 10px;
 }
 
-body, html {
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
-}
-
-h3 {
-  margin: 0px;
-}
-
-p {
-  margin: 0px;
-}
-
 .explore-button {
   display: flex;
   justify-content: center;
@@ -152,6 +150,23 @@ p {
   .explore-button {
     width: 40%;
   }
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  border: none;
+  font-size: 16px;
+}
+.nav-button:hover {
+  opacity: 0.8;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.5);
 }
 
 .new-button {
@@ -280,12 +295,13 @@ header {
   justify-content: center;
   height: 80px;
   padding-bottom: 90px;
+  margin-bottom: 20px;
 }
 header .nav__logo {
-  background-position: top left;
-  background-position: top center;
-  height: 50px;
+  background-position: center;
+  height: 40px;
   width: 100%;
+  margin-top: 15px;
 }
 header a {
   position: absolute;
@@ -306,32 +322,19 @@ header a .return-button {
 }
 
 .loader {
-  position: fixed;
-  display: flex;
-  top: 0px;
-  left: 0px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  animation: opacity 3s forwards;
-  background-color: white;
-  object-fit: cover;
-}
-.loader__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: auto;
-  font-size: 270%;
-  color: beige;
-  padding: 30px;
-  font-family: "Shrikhand", cursive;
-  border-radius: 10px;
-  animation: loader 1, 5s ease-in-out both;
-  border: 5px solid #9356DC;
-  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  display: block;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 30%;
+  border: 16px solid #99E2D0;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+  animation: spin hide-spinner 2s linear infinite;
+  z-index: 10000;
 }
 
 .location {
