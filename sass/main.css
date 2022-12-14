@@ -64,13 +64,15 @@
     transform: rotate(360deg);
   }
 }
-body, html {
+h1 {
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
-h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
+h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 h3 {
@@ -86,7 +88,7 @@ p {
   font-size: medium;
 }
 
-.restaurant-menus__title {
+.restaurant-menus__tittle {
   font-family: "Shrikhand";
   font-weight: 400;
 }
@@ -183,32 +185,61 @@ i {
 }
 
 .heart-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-}
-.heart-button i {
-  font-size: 25px;
   position: relative;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
 }
-.heart-button i:hover::after {
-  transform: scale(1);
+.heart-button:hover {
+  color: #FF79DA;
 }
-.heart-button i::after {
-  content: "\f004";
+.heart-button .not-liked {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  transform: scale(0);
-  font-weight: 900;
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  transform-origin: bottom;
-  transition: transform 400ms;
+  top: 0;
+  left: 0;
+}
+.heart-button .liked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FF79DA;
+  z-index: 2;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-button .liked:hover {
+  opacity: 1;
+}
+
+.heart-button-menu {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+}
+.heart-button-menu:hover {
+  color: #FF79DA;
+}
+.heart-button-menu .not-liked {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.heart-button-menu .liked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FF79DA;
+  z-index: 2;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-button-menu .liked:hover {
+  opacity: 1;
 }
 
 footer {
@@ -293,9 +324,10 @@ footer .footer__links ul a {
 header {
   display: flex;
   justify-content: center;
-  height: 80px;
-  padding-bottom: 90px;
-  margin-bottom: 20px;
+  height: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 header .nav__logo {
   background-position: center;
@@ -322,19 +354,28 @@ header a .return-button {
 }
 
 .loader {
-  position: absolute;
-  height: 180px;
-  width: 180px;
-  display: block;
-  margin-left: 40%;
-  margin-right: 40%;
-  margin-top: 30%;
-  border: 16px solid #99E2D0;
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-bottom: 16px solid #FF79DA;
-  animation: spin hide-spinner 2s linear infinite;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(0deg, 0%, 100%, 0.9);
   z-index: 10000;
+  animation: hide-spinner 3s 1;
+  visibility: hidden;
+}
+.loader .loader-circle {
+  border: 10px solid #9356DC;
+  border-top: 10px solid #99E2D0;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: spin linear 1.5s 2;
 }
 
 .location {
@@ -556,12 +597,18 @@ section {
   border-radius: 40px 30px 0px 0px;
   background-color: #f7f7f7;
 }
-.restaurant-menus__title {
+.restaurant-menus__tittle {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
+  justify-content: space-between;
+  padding-right: 40px;
   font-size: 14px;
+}
+
+.menu-components__tittle {
+  padding-bottom: 6px;
+  border-bottom: 4px solid #99E2D0;
+  margin-right: 90%;
 }
 
 @media all and (min-width: 992px) {

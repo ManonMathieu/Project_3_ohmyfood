@@ -59,35 +59,94 @@ background: $color-tertiary;
 }
 
 .heart-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
 
-    & i {
-        font-size: 25px;
-        position: relative;
-        cursor: pointer;
+    &:hover {
+        color: $color-secondary;
+    }
+
+    .not-liked {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .liked {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-secondary;
+        z-index: 2;
+        background: linear-gradient(0deg, $color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
 
         &:hover {
-            &::after {
-                transform: scale(1);
-            }
+            opacity: 1;
         }
 
-        &::after {
-            content: '\f004';
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            transform: scale(0);
-            font-weight: 900;
-            background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
-            background-clip: text; 
-            color: transparent;
-            transform-origin: bottom;
-            transition: transform 400ms;
+        // & i {
+        //     font-size: 25px;
+        //     position: relative;
+        //     cursor: pointer;
+
+        //     &:hover {
+        //         &::after {
+        //             transform: scale(1);
+        //         }
+        //     }
+
+        //     &::after {
+        //         content: '\f004';
+        //         position: absolute;
+        //         top: 0px;
+        //         left: 0px;
+        //         transform: scale(0);
+        //         font-weight: 900;
+        //         background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+        //         background-clip: text; 
+        //         color: transparent;
+        //         transform-origin: bottom;
+        //         transition: transform 400ms;
+        //     }
+        // }
+    }
+}
+
+
+.heart-button-menu {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-secondary;
+    }
+
+    .not-liked {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .liked {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-secondary;
+        z-index: 2;
+        background: linear-gradient(0deg, $color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
