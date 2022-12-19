@@ -139,21 +139,22 @@
 
     &__list {
         display: flex;
-        flex-direction: column;
+        flex-direction: column ; 
 
         @media all and (min-width: $tablet-width) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+            }
+        
         & a {
             @media all and (min-width: $tablet-width) {
                 width: 45%;
             }
 
             @media all and (min-width: $desktop-width) {
-                width: 20%;
+                width: 30%;
             }
         }
 
