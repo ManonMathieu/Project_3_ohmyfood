@@ -429,7 +429,6 @@ header a .return-button {
 @media all and (min-width: 992px) {
   .operation__title {
     text-align: center;
-    text-decoration: underline;
   }
 }
 .operation__steps {
@@ -502,9 +501,8 @@ header a .return-button {
   padding: 20px;
 }
 @media all and (min-width: 992px) {
-  .restaurants h2 {
+  .restaurants h1 {
     text-align: center;
-    text-decoration: underline;
     margin-top: 0px;
   }
 }
@@ -512,12 +510,11 @@ header a .return-button {
   display: flex;
   flex-direction: column;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
   .restaurants__list {
-    display: flex;
+    width: 100%;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 @media all and (min-width: 768px) {
